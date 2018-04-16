@@ -1,0 +1,155 @@
+#slick {
+	position: relative;
+	width: 1920px;
+	height: 700px;
+}
+#slick .slick-arrow {
+	position: absolute;
+	display: block;
+	top: 50%;
+	width: 60px;
+	height: 60px;
+	transform: translateY(-50px);
+	z-index: 30;
+	color: #fff;
+	border-width: 0;
+	font-size: 0;
+	cursor: pointer;
+}
+#slick .slick-arrow:focus {
+outline: 0;
+border: 0;
+}
+#slick .slick-prev {
+	left: 215px;
+	background: url(../icon/button-prev.png) center center no-repeat;
+	background-size: 60px 60px;
+}
+#slick .slick-next {
+	right:215px;
+	background: url(../icon/button-next.png) center center no-repeat;
+	background-size: 60px 60px;
+}
+.slick-dots {
+	bottom: 30px;
+}
+
+/* 欢迎介绍 */
+#welcome {
+	margin: 0 auto;
+	width: 1140px;
+}
+#welcome h1 {
+	text-align: center;
+	margin-top: 60px;
+	margin-bottom: 32px;
+	font-weight: normal;
+}
+#welcome hr {
+	width: 1140px;
+	height: 1px;
+	background-color: #ddd;
+}
+#welcome p {
+	margin-top: 20px;
+	text-align: center;
+	font-family: Axure Handwriting;
+	/*font-family: Harlow Solid Italic;*/
+	/*font-family: Lobster;*/
+	/*font-family: Georgia;*/
+	line-height: 32px;
+	font-size: 18px;
+	font-smoothing: antialiased;
+	-webkit-font-smoothing: antialiased;
+}
+#home-product {
+	width: 1140px;
+	margin: 0 auto;
+	margin-top: 70px;
+}
+#home-product li {
+	position: relative;
+	margin-right: 3px;
+	margin-bottom: 3px;
+	float: left;
+	width: 378px;
+	height: 252px;
+	cursor: pointer;
+	overflow: hidden;
+}
+#home-product li:nth-child(3n+3) {
+	margin-right: 0;
+}
+#home-product img {
+	transition: all 0.6s;
+}
+#home-product img:hover {
+	-ms-transform: scale(1.5, 1.5); /* IE 9 */
+  -webkit-transform: scale(1.5, 1.5); /* Safari */
+  transform: scale(1.5, 1.5);
+}
+#home-product li span {
+	width: 100%;
+	height: 40px;
+	position: absolute;
+	bottom: 0;
+	text-align: center;
+	background-color: rgba(0,0,0,0.34);
+	line-height: 40px;
+	font-size: 16px;
+	color: #fff;
+}
+/* share */
+.jssocials-shares {
+	margin-left: 200px;
+}
+.jssocials-shares a {
+	position: relative;
+	width: 34px;
+	height: 34px;
+	background-color: #fff;
+	border-radius: 50%;
+}
+.jssocials-shares a i {
+	transition: all 0.6s;
+	position: absolute;
+	top: -3px;
+	left: -3px;
+}
+.jssocials-shares a i:hover {
+	-ms-transform: scale(1.2, 1.2); /* IE 9 */
+  -webkit-transform: scale(1.2, 1.2); /* Safari */
+  transform: scale(1.2, 1.2);
+}
+.jssocials-share-email .jssocials-share-logo {
+	display: block;
+	width: 40px;
+	height: 40px;
+	background: url(../icon/email.svg) center center no-repeat;
+	background-size: 40px;
+	height: 40px;
+}
+.jssocials-share-twitter .jssocials-share-logo {
+	display: block;
+	width: 40px;
+	height: 40px;
+	background: url(../icon/twitter.svg) center center no-repeat;
+	background-size: 40px;
+	height: 40px;
+}
+.jssocials-share-facebook .jssocials-share-logo {
+	display: block;
+	width: 40px;
+	height: 40px;
+	background: url(../icon/facebook.svg) center center no-repeat;
+	background-size: 40px;
+	height: 40px;
+}
+.jssocials-share-googleplus .jssocials-share-logo {
+	display: block;
+	width: 40px;
+	height: 40px;
+	background: url(../icon/google.svg) center center no-repeat;
+	background-size: 40px;
+	height: 40px;
+}

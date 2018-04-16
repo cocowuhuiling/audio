@@ -1,0 +1,78 @@
+/* logo+nav */
+#header, #nav {
+	margin: 0 auto;
+	width: 1140px;
+}
+#header {
+	margin-top: 30px;
+	margin-bottom: 60px;
+	position: relative;
+}
+#logo img {
+	margin: 0 auto;
+}
+#language {
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+#language span {
+	font-weight: 600;
+	font-size: 14px;
+	color: #333;
+	display: inline-block;
+}
+#language .chinese {
+	padding-left: 40px;
+}
+#nav {
+	position: relative;
+	margin-bottom: 63px;
+	text-transform: uppercase;
+}
+#nav a {
+	display: inline-block;
+	width: 16.3%;
+	text-align: center;
+	font-size: 24px;
+	color: #333;
+}
+#nav a:hover {
+	color: #91650e;
+}
+#nav a:hover >.arrow {
+	background: url(../icon/arrow.png) center center no-repeat;
+}
+#nav a:hover >ul {
+	display: block;
+
+}
+#nav .active {
+	color: #91650e;
+}
+#nav .arrow {
+	display: inline-block;
+	width: 25px;
+	height: 18px;
+	background: url(../icon/arrow-black.png) center center no-repeat;
+}
+/* 二级目录 */
+#nav .sub-nav {
+	display: none;
+	position: absolute;
+	width: 300px;
+	background-color: #a97d1f;
+	color: #fff;
+	text-align: left;
+	padding-bottom: 24px;
+	z-index: 99;
+}
+#nav .sub-nav li {
+	padding-left: 18px;
+	font-weight: 300;
+	padding-top: 24px;
+	font-size: 22px;
+}
+#nav .sub-nav li:hover {
+	color: #91650e;
+}

@@ -2,106 +2,158 @@
 <html>
 <head>
 	<title>首页</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="slick/slick.css">
-	<!-- <link rel="stylesheet" href="slick/slick-theme.css"> -->
-	<link rel="stylesheet" href="home.css">
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/header.css">
+	<link rel="stylesheet" href="css/home.css"/>
+	<!-- slick引用 -->
+	<link rel="stylesheet" href="slick/slick.css">
+	<link rel="stylesheet" href="slick/slick-theme.css">
+	<!-- share引用 -->
+	<link rel="stylesheet" href="jssocials-1.4.0/jssocials.css">
+	<link rel="stylesheet" href="css/footer.css"/>
+
 </head>
 <body>
-	<!-- 顶部栏来时 -->
 	<header id="header">
-	<div id="top">
-		<div id="top-content">
-			<span class="top-email">Email:cocolin@gmail.com</span>
-			<span class="top-copy">Copyright © 2018 Sunon group Co.</span>
-		</div>
-	</div>
-	<!-- 顶部栏结束 -->
-	<!-- logo开始 -->
-	<div id="nav-content">
-		<div id="logo">
-			
-		</div>
-		<nav id="nav" class="clearfix">
-			<a href="home.html" class="nav-active">首页</a>
-			<a href="product.html">产品</a>
-      <a href="brand.html">品牌</a>
-      <a href="about.html">关于</a>
-      <a href="contact.html">联系</a>
-		</nav>
-	</div>
-	<!-- logo结束 -->
+		<div id="logo"><img src="icon/logo.png" alt=""></div>
+		<div id="language"><span>ENGLISH</span><span class="chinese">中文</span></div>
 	</header>
- <!-- 轮播图开始 -->
-  <div id="carousel-content">
-  	<div class="carousel">
-	    <div><a href=""><img src="placeholder/slick1.png" alt=""></a></div>
-	    <div><a href=""><img src="placeholder/slick1.png" alt=""></a></div>
-	    <div><a href=""><img src="placeholder/slick1.png" alt=""></a></div>
-    </div>
-    <span class="next-slick slick-arrow"></span>
-   	<span class="prev-slick slick-arrow"></span>
-  </div>
-  <!-- 轮播图结束 -->
-  <!-- 介绍开始 -->
-	<section id="intro-content">
-		<div class="intro">
-			<h1>欢迎来到音响中心</h1>
-			<hr>
-			<p>Martin Brewster 35多年来一直是音乐发烧友和音乐家。他于1996创立音频参考资料。从听音乐中衍生的喜悦，滋养了在他慷慨激昂的搜索到的音乐再现，艺术追求分辨率，乐器音色的准确性和上述所有的自然的和可信的音乐”。这一经验，以及仔细聆听音乐的方式，已经形成了从世界上最受尊敬的一些制造商选择的设备的基础。</p>
+	<!-- 导航 -->
+	<nav id="nav">
+		<a href="" class="active">HOME</a>
+		<a href="">PRODUCTS
+			<span class="arrow"></span>
+			<ul class="sub-nav">
+				<li>MAGNIFER</li>
+				<li>SIMULATOR</li>
+				<li>SPEAKER</li>
+				<li>CABLES</li>
+				<li>ACCESSPRIES</li>
+				<li>MUSIC SERVER</li>
+			</ul>
+		</a>
+		<a href="">BRANDS
+			<span class="arrow"></span>
+			<ul class="sub-nav">
+				<li>Huiwei</li>
+				<li>Ymaha</li>
+				<li>Philips</li>
+				<li>Sony</li>
+				<li>Samsung</li>
+				<li>Tianlong</li>
+			</ul>
+		</a>
+		<a href="">NEWS
+			<span class="arrow"></span>
+			<ul class="sub-nav">
+				<li>MAGNIFER</li>
+				<li>SIMULATOR</li>
+				<li>SPEAKER</li>
+				<li>CABLES</li>
+				<li>ACCESSPRIES</li>
+				<li>MUSIC SERVER</li>
+			</ul>
+		</a>
+		<a href="">SERVICES
+			<span class="arrow"></span>
+			<ul class="sub-nav">
+				<li>MAGNIFER</li>
+				<li>SIMULATOR</li>
+				<li>SPEAKER</li>
+				<li>CABLES</li>
+				<li>ACCESSPRIES</li>
+				<li>MUSIC SERVER</li>
+			</ul>
+		</a>
+		<a href="">ABOUTUS</a>
+	</nav>
+	<!-- 轮播图 -->
+	<div id=home-slick>
+		<div id="slick">
+		  <div>	<img src="placeholder/slick1.png" alt=""></div>
+		  <div>	<img src="placeholder/slick1.png" alt=""></div>
+		  <div>	<img src="placeholder/slick1.png" alt=""></div>
 		</div>
-		<ul class="audio clearfix">
-			<li>
-				<a href=""><img src="placeholder/s1.jpg" alt=""><span>天龙音箱</span></a>
-			</li>
-			<li>
-				<a href=""><img src="placeholder/s2.jpg" alt=""><span>索尼音箱</span></a>
-			</li>
-			<li>
-				<a href=""><img src="placeholder/s3.jpg" alt=""><span>三星音箱</span></a>
-			</li>
-			<li>
-				<a href=""><img src="placeholder/s4.jpg" alt=""><span>惠威音箱</span></a>
-			</li>
-			<li>
-				<a href=""><img src="placeholder/s5.jpg" alt=""><span>天骏音箱</span></a>
-			</li>
-			<li>
-				<a href=""><img src="placeholder/s6.jpg" alt=""><span>雅哈玛音箱</span></a>
-			</li>
-		</ul>
-	</section>
-	<!-- 介绍结束 -->
-	<!-- 合作伙伴开始 -->
-	<ul id="co-logo">
-		<li><img src="" alt=""></li>
-		<li><img src="" alt=""></li>
-		<li><img src="" alt=""></li>
-		<li><img src="" alt=""></li>
-		<li><img src="" alt=""></li>
-		<li><img src="" alt=""></li>
+	</div>
+
+	<!-- 欢迎介绍 -->
+	<div id=welcome>
+		<h1>Welcome to Audio Reference</h1>
+		<hr>
+		<p>
+			Martin Brewster has been an audio enthusiast and musician for over 35 years. He founded Audio Reference in 1996. 
+			The joy derived from listening to music, has nourished within him an impassioned search into the art of musical 
+			reproduction,seeking resolution, accuracy of instrument timbre and above all  ‘A natural and believable musicality’. 
+			This experience, along with listening carefully to the way the music is presented, has formed the basis of the 
+			equipment selected from some of the most respected manufacturers in the world.Please do not hesitate to contact 
+			us, should you need any further information. (See contacts page)
+		</p>
+	</div>
+
+	<!-- 产品 -->
+	<ul id="home-product" class="clearfix">
+		<li>
+			<img src="placeholder/s1.png" alt="">
+			<span>Turntables & Accessories</span>
+		</li>
+		<li>
+			<img src="placeholder/s1.png" alt="">
+			<span>Turntables & Accessories</span>
+		</li>
+		<li>
+			<img src="placeholder/s1.png" alt="">
+			<span>Turntables & Accessories</span>
+		</li>
+		<li>
+			<img src="placeholder/s1.png" alt="">
+			<span>Turntables & Accessories</span>
+		</li>
+		<li>
+			<img src="placeholder/s1.png" alt="">
+			<span>Turntables & Accessories</span>
+		</li>
+		<li>
+			<img src="placeholder/s1.png" alt="">
+			<span>Turntables & Accessories</span>
+		</li>
 	</ul>
-	<!-- 合作伙伴结束 -->
+	<!-- footer -->
+
 	<footer id="footer">
-		<div class="footer-content clearfix">
-			<div class="search">
-				<span>搜索音箱产品</span>
-				<input type="text" placeholder="搜索">
+		<div id="footer-con" class="clearfix">
+			<div id="search">
+				<span>Search Audio Reference</span>
+				<input type="text" placeholder="search">
 			</div>
-			<div class="share">
-				<ul class="clearfix">
-					<li class="subscribe"><a href="subscribe.html"></a></li>
-					<li class="email"><a href="subscribe.html"></a></li>
-					<li class="facebook"><a href="subscribe.html"></a></li>
-					<li class="google"><a href="subscribe.html"></a></li>
-					<li class="twitter"><a href="subscribe.html"></a></li>
-				</ul>
-				<p>Powered by Sunon group Co.</p>
+			<div id="share-wrap">
+				<ul id="share">share</ul>
+				<span>Powered by Sunon group Co.</span>
 			</div>
 		</div>
+		
 	</footer>
-	<script src="jquery/jquery-3.3.1.min.js"></script>
-	<script src="jquery/jquery-migrate-1.2.1.min.js"></script>
-	<script src="slick/slick.js"></script>
-	<script src="js/home.js"></script>
+<!-- slcik -->
+<script type="text/javascript" src="jquery/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="jquery/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="slick/slick.min.js"></script>
+<script>	
+	$(document).ready(function(){
+	  $('#slick').slick({
+	  	dots: true,
+	  });
+	});
+</script>
+<!-- share -->
+<script type="text/javascript" src="jssocials-1.4.0/jssocials.min.js"></script>
+<script>
+	$("#share").jsSocials({
+    showLabel: false,
+    // showCount: false,
+    shares: ["email", "twitter", "facebook", "googleplus"]
+ 	})
+</script>
 </body>
 </html>

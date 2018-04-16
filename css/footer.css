@@ -1,0 +1,96 @@
+#footer {
+	margin-top: 102px;
+	height: 227px;
+	background-color: #5b5b5b;
+	font-family: Axure Handwriting;
+}
+#footer-con {
+	position: relative;
+	margin: 0 auto;
+	width: 1140px;
+	padding-top: 63px;
+	font-size: 24px;
+}
+#search {
+	width: 50%;
+	float: left;
+	height: 100%
+}
+#search span {
+	color: #ffffff;
+}
+#search input {
+	margin-top: 32px;
+	width: 300px;
+	height: 50px;
+	border-radius: 10px;
+	border-width: 0;
+	font-size: 20px;
+	text-indent: 18px;
+	font-family: Axure Handwriting;
+}
+#share-wrap {
+	width: 50%;
+	float: right;
+	height: 100%
+}
+#share-wrap span {
+	margin-top: 28px;
+	color: #ffffff;
+	text-align: right;
+}
+/* share */
+.jssocials-shares {
+	margin: 0px;
+	text-align: right;
+}
+.jssocials-shares a {
+	position: relative;
+	width: 34px;
+	height: 34px;
+	background-color: #fff;
+	border-radius: 50%;
+}
+.jssocials-shares a i {
+	transition: all 0.6s;
+	position: absolute;
+	top: -3px;
+	left: -3px;
+}
+.jssocials-shares a i:hover {
+	-ms-transform: scale(1.2, 1.2); /* IE 9 */
+  -webkit-transform: scale(1.2, 1.2); /* Safari */
+  transform: scale(1.2, 1.2);
+}
+.jssocials-share-email .jssocials-share-logo {
+	display: block;
+	width: 40px;
+	height: 40px;
+	background: url(../icon/email.svg) center center no-repeat;
+	background-size: 40px;
+	height: 40px;
+}
+.jssocials-share-twitter .jssocials-share-logo {
+	display: block;
+	width: 40px;
+	height: 40px;
+	background: url(../icon/twitter.svg) center center no-repeat;
+	background-size: 40px;
+	height: 40px;
+}
+.jssocials-share-facebook .jssocials-share-logo {
+	display: block;
+	width: 40px;
+	height: 40px;
+	background: url(../icon/facebook.svg) center center no-repeat;
+	background-size: 40px;
+	height: 40px;
+}
+.jssocials-share-googleplus .jssocials-share-logo {
+	display: block;
+	width: 40px;
+	height: 40px;
+	background: url(../icon/google.svg) center center no-repeat;
+	background-size: 40px;
+	height: 40px;
+}

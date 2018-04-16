@@ -1,0 +1,37 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	font-family: "Microsoft YaHei";
+	color: #333;
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+
+h1,ul,hr,p {
+	margin: 0;
+	padding: 0;
+}
+hr {
+	border: none;
+}
+li {
+	list-style-type: none;
+}
+a, img,span {
+	display: block;
+}
+a {
+	text-decoration: none;
+}
+.clearfix:after {
+
+  display: table;
+  content: " ";
+  clear: both;
+}
+button:active {
+outline: none;
+border: none;
+}
