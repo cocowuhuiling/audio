@@ -50,6 +50,9 @@
 #nav .active {
 	color: #91650e;
 }
+#nav .active .arrow {
+	background: url(../icon/arrow.png) center center no-repeat;
+}
 #nav .arrow {
 	display: inline-block;
 	width: 25px;

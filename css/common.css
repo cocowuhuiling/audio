@@ -35,3 +35,42 @@ button:active {
 outline: none;
 border: none;
 }
+
+/* 分页 */
+#page-wrap {
+	width: 1140px;
+	margin: 0 auto;
+	margin-top: 56px;
+}
+#page {
+	float: right;
+	position: relative;
+	text-align: right;
+}
+#page li {
+	margin-left: 10px;
+	float: left;
+	display: block;
+	width: 34px;
+	height: 34px;
+	background-color: #a97d1f;
+	text-align: center;
+	border-radius: 50%;
+	line-height: 34px;
+	color: #fff;
+	cursor: pointer;
+}
+#page .prev {
+	line-height: 34px;
+	font-size: 0;
+	text-align: center;
+	background: url(../icon/arrow-p.svg) center center no-repeat #a97d1f;
+	transform: rotate(180deg);
+	background-size: 18px 18px;
+}
+#page .next  {
+		text-align: center;
+	font-size: 0;
+	background: url(../icon/arrow-p.svg) center center no-repeat #a97d1f;
+	background-size: 18px 18px;
+}
