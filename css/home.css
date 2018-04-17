@@ -43,7 +43,6 @@ border: 0;
 	text-align: center;
 	margin-top: 60px;
 	margin-bottom: 32px;
-	font-weight: normal;
 }
 #welcome hr {
 	width: 1140px;
@@ -81,14 +80,14 @@ border: 0;
 	margin-right: 0;
 }
 #home-product img {
-	transition: all 0.6s;
+	transition: all 1s;
 }
 #home-product img:hover {
 	-ms-transform: scale(1.5, 1.5); /* IE 9 */
   -webkit-transform: scale(1.5, 1.5); /* Safari */
   transform: scale(1.5, 1.5);
 }
-#home-product li span {
+#home-product li h2 {
 	width: 100%;
 	height: 40px;
 	position: absolute;
@@ -98,4 +97,40 @@ border: 0;
 	line-height: 40px;
 	font-size: 16px;
 	color: #fff;
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+}
+/* 评价 */
+.evaluate {
+	width: 1140px;
+	margin: 0 auto;
+}
+.evaluate h1 {
+	margin: 60px 0;
+	text-align: center;
+}
+.evaluate li {
+	padding: 0 40px;
+	border-right: 1px solid #ddd;
+	width: 299px;
+	height: 220px;
+	float: left;
+	color: #333;
+	font-family: Axure Handwriting;
+}
+.evaluate li:last-child {
+	border-right: 0;
+}
+.evaluate .eva-con {
+	margin-top: 24px;
+}
+.evaluate .author {
+	margin-top: 24px;
+	text-align: right;
+}
+.evaluate span {
+	width: 200px;
+	text-align: right;
+	float: right;
 }

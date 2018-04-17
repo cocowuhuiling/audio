@@ -15,12 +15,14 @@
 	position: absolute;
 	right: 0;
 	top: 0;
+	font-family: Axure Handwriting;
 }
 #language span {
 	font-weight: 600;
 	font-size: 14px;
 	color: #333;
 	display: inline-block;
+	cursor: pointer;
 }
 #language .chinese {
 	padding-left: 40px;

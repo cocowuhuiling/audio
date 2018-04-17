@@ -6,19 +6,24 @@
 	position: relative;
 	height: 424px;
 	margin-bottom: 28px;
+	cursor: pointer;
 }
-#product-list li span{
+#product-list li h2{
 	position: absolute;
 	left: 50%;
 	transform: translateX(-50%);
 	bottom: 24px;
-	width: 650px;
+	width: 610px;
 	height: 60px;
 	text-align: center;
+	padding: 0 20px;
 	background-color: rgba(255,255,255,0.4);
 	color: #000;
 	font-size: 18px;
 	line-height: 60px;
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
 }
 /* 产品详情 */
 #product-detail {
