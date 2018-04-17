@@ -1,0 +1,52 @@
+#news-wrap {
+	width: 1140px;
+	margin: 0 auto;
+}
+.news {
+	margin-bottom: 90px;
+	height: 300px;
+}
+.news .left {
+	position: relative;
+	width: 430px;
+	float: left;
+}
+.news .left .img-wrap {
+	width: 220px;
+	height: 189px;
+	overflow: hidden;
+	padding: 2px;
+	background-color: #a97d1f;
+}
+.news .left .img2 {
+	position: absolute;
+	left: 39%;
+	top: 45%;
+}
+
+.news .right {
+	width: 710px;
+	float: left;
+}
+.news .right h1 {
+	font-size: 18px;
+	font-weight: 600;
+	color: #333;
+}
+.news .right .date {
+	margin-top: 17px;
+	margin-bottom: 27px;
+	font-size: 16px;
+	color: #939393;
+	font-family: Axure Handwriting;
+}
+.news .right p {
+	font-size: 18px;
+	font-family: Axure Handwriting;
+}
+.news .right .more {
+	margin-top: 50px;
+	display: block;
+	text-align: right;
+	font-family: Axure Handwriting;
+}
