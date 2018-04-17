@@ -1,0 +1,16 @@
+#search-result {
+	margin: 0 auto;
+	width: 1140px;
+}
+#search-result h1 {
+	margin-bottom: 45px;
+	font-size: 24px;
+}
+#search-result li {
+	font-size: 18px;
+	color: #333;
+	border-bottom: 1px solid #ddd;
+	padding-bottom: 20px;
+	padding-top: 36px;
+	font-family: Axure Handwriting;
+}
