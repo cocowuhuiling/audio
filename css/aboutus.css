@@ -1,0 +1,44 @@
+#about {
+	position: relative;
+	width: 1920px;
+	height: 800px;
+	margin: 0 auto;
+}
+#about .moup {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 1920px;
+	height: 800px;
+	background-color: rgba(0,0,0,0.47);
+}
+.about-content {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	height: 900px;
+	transform: translate(-50%,-50%);
+	width: 1140px;
+	margin: 0 auto;
+	color: #fff;
+}
+.about-content {
+	font-size: 22px;
+	line-height: 32px;
+	font-family: Axure Handwriting;
+	text-align: center;
+}
+.about-content .about {
+	margin: 130px 0;
+}
+.about-content .title {
+	text-align: left;
+}
+.about-content .contact {
+	margin-top: 35px;
+}
+.about-content .contact span {
+	text-align: left;
+	width: 50%;
+	display: inline-block;
+}
