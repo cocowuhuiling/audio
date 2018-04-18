@@ -52,12 +52,9 @@ border: 0;
 #welcome p {
 	margin-top: 20px;
 	text-align: center;
-	font-family: Axure Handwriting;
-	/*font-family: Harlow Solid Italic;*/
-	/*font-family: Lobster;*/
-	/*font-family: Georgia;*/
+	font-family: Futura;
 	line-height: 32px;
-	font-size: 18px;
+	font-size: 22px;
 	font-smoothing: antialiased;
 	-webkit-font-smoothing: antialiased;
 }
@@ -92,6 +89,7 @@ border: 0;
 	height: 40px;
 	position: absolute;
 	bottom: 0;
+	font-weight: lighter;
 	text-align: center;
 	background-color: rgba(0,0,0,0.34);
 	line-height: 40px;
@@ -117,7 +115,8 @@ border: 0;
 	height: 220px;
 	float: left;
 	color: #333;
-	font-family: Axure Handwriting;
+	font-family: Futura;
+	font-size: 22px;
 }
 .evaluate li:last-child {
 	border-right: 0;

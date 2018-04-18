@@ -1,8 +1,20 @@
+@font-face {
+	font-family: Citadina;
+	src: url("../font/CitadinaRegular.otf");
+}
+@font-face {
+	font-family: Anodina-Regular;
+	src: url("../font/Anodina-Regular.otf");
+}
+@font-face {
+	font-family: Futura;
+	src: url("../font/FuturaNo2DEE.ttf");
+}
+
 html, body {
 	margin: 0;
 	padding: 0;
-	font-family: "Microsoft YaHei";
-	color: #333;
+	font-family: Anodina-Regular;
 }
 * {
 	margin: 0;
@@ -12,6 +24,10 @@ html, body {
 h1,ul,hr,p {
 	margin: 0;
 	padding: 0;
+}
+h1,h2 {
+	font-family: Citadina;
+	/*font-weight: 500;*/
 }
 hr {
 	border: none;
