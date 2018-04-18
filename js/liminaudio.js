@@ -17,5 +17,18 @@
 			$(this).addClass("active");
 			$(".tab-content li").removeClass("active");
 			$(".tab-content li").eq(index).addClass("active");
-		})
+		});
+		// 获取滚动条的高度
+		$(window).scroll(function() {
+		var height= $(document).scrollTop();
+			if(height>185) {
+				$("#logo").hide();
+				$("#language").hide();
+				$("#nav-wrap").css({position:"fixed","border-bottom": "1px solid rgb(221, 221, 221)"});
+			}else{
+				$("#logo").show();
+				$("#language").show();
+				$("#nav-wrap").css({position:"relative",border: 0});
+			}
+		});
 	});
