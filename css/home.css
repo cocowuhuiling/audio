@@ -9,7 +9,7 @@
 	top: 50%;
 	width: 60px;
 	height: 60px;
-	transform: translateY(-50px);
+	transform: translateY(-50%);
 	z-index: 30;
 	color: #fff;
 	border-width: 0;
@@ -132,4 +132,68 @@ border: 0;
 	width: 200px;
 	text-align: right;
 	float: right;
+}
+@media (max-width: 414px) {
+/* 轮播图 */
+	#home-slick #slick {
+		width: 100%;
+		height: auto;
+	}
+	#slick .slick-prev {
+		left: 10px;
+		background-size: 34px 34px;
+	}
+	#slick .slick-next {
+		right: 10px;
+		background-size: 34px 34px;
+
+	}
+	#slick img {
+		width: 100%;
+	}
+	#slick .slick-arrow {
+	}
+	#welcome {
+		width: 100%;
+	}
+	#welcome h1 {
+		font-size: 22px;
+		margin: 0;
+		line-height: 60px;
+	}
+	#welcome hr {
+		width: 100%;
+	}
+	#home-product {
+		width: 100%;
+	}
+	#home-product li {
+		margin-bottom: 10px;
+		width: 100%;
+		border: 1px solid #ddd;
+	}
+	#home-product img {
+		width: 100%;
+	}
+	.slick-dots {
+		bottom: 0px;
+	}
+	#home-slick .slick-dots li button:before {
+		font-size: 16px;
+	}
+	#home-slick .slick-dots li {
+		margin: 0;
+	}
+	.evaluate {
+		width: 100%;
+	}
+	.evaluate h1 {
+		font-size: 22px;
+		margin: 0;
+		margin-top: 30px;
+	}
+	.evaluate li {
+		height: auto;
+	}
+	
 }

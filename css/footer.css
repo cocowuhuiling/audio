@@ -1,7 +1,8 @@
 #footer {
 	margin-top: 102px;
 	height: 227px;
-	background-color: #5b5b5b;
+	/*background-color: #5b5b5b;*/
+	background-color: #000;
 }
 #footer-con {
 	position: relative;
@@ -92,4 +93,38 @@
 	background: url(../icon/google.svg) center center no-repeat;
 	background-size: 40px;
 	height: 40px;
+}
+@media (max-width: 414px) {
+	#footer {
+		height: auto;
+	}
+	#footer-con {
+		padding: 40px 0;
+		width: 100%;
+	}
+	#search {
+		float: none;
+		width: 100%;
+	}
+	#search span {
+		text-align: center;
+	}
+	#search input {
+		margin-top: 16px;
+		position: relative;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+	#share-wrap {
+		margin-top: 22px;
+		float: none;
+		width: 100%;
+	}
+	#share-wrap span {
+		text-align: center;
+		margin-top: 10px;
+	}
+	.jssocials-shares {
+		text-align: center;
+	}
 }
