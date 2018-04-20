@@ -42,3 +42,33 @@
 	width: 50%;
 	display: inline-block;
 }
+@media(max-width: 414px) {
+	#about {
+		width: 100%;
+		overflow: hidden;
+	}
+	#about img {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%,-50%);
+	}
+	#about .moup {
+		width: 100%;
+	}
+	.about-content {
+		width: 100%;
+		font-size: 18px;
+	}
+	.about-content .about {
+		margin: 0;
+		padding: 100px 10px;
+		line-height: 26px;
+	}
+	.about-content .title {
+		padding-left: 10px;
+	}
+	.about-content .contact {
+		padding-left: 10px;
+	}
+}
