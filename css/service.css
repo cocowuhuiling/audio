@@ -3,12 +3,28 @@
 	margin: 0 auto;
 }
 #service h1 {
-	font-size: 24px;
-	margin: 41px 0;
+	font-size: 20px;
+	margin: 28px 0;
 	font-weight: 500;
 }
 #service p {
-	font-size: 18px;
+	font-size: 22px;
 	line-height: 32px;
-	font-family: Axure Handwriting;
+	font-family: Futura;
+}
+@media(max-width: 414px) {
+	#service {
+		width: 100%;
+	}
+	#service img {
+		width: 100%;
+	}
+	#service h1 {
+		font-size: 18px;
+		padding: 0 10px;
+	}
+	#service p {
+		font-size: 18px;
+		padding: 0 10px;
+	}
 }

@@ -146,9 +146,11 @@
 		height: 100%;
 	}
 	#nav-wrap {
-		position: fixed;
+		position: absolute;
 		width: 100%;
+		/*height: 100%;*/
 		height: 100%;
+		min-height: 3000px;
 		overflow: hidden;
 		display: none;
 	}
@@ -162,12 +164,19 @@
 		width: 60%;
 		display: block;
 	}
+	.nav-list .arrow {
+		top: 25px;
+		transform: translate(0,0);
+	}
 	#nav a {
 		display: block;
 		color: #fff;
 		width: 40%;
 		text-align: left;
 		padding-left: 20px;
+	}
+	.sub-nav {
+		position: initial;
 	}
 	.nav-list .arrow {
 		width: 25px;

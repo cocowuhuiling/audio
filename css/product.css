@@ -75,3 +75,53 @@
 	text-align: left;
 	line-height: 60px;
 }
+@media(max-width: 414px){
+	#product-list {
+		width: 100%;
+	}
+	#product-list li {
+		height: auto;
+		margin-bottom: 5px;
+	}
+	#product-list li img {
+		width: 100%;
+	}
+	#page-wrap {
+		width: 100%;
+	}
+	#product-list li h2 {
+		width: 90%;
+		height: 40px;
+		font-size: 16px;
+		line-height: 40px;
+		bottom: 10px;
+	}
+	/* 产品详情 */
+	#product-detail {
+		width: 100%;
+		min-height: 100%;
+	}
+	#product-detail h1 {
+		font-size: 18px;
+		text-align: center;
+		margin-top: 10px;
+	}
+	#product-detail img {
+		width: 100%;
+	}
+	#product-detail .tab-title li {
+		font-size: 18px;
+		width: 32.3%;
+	}
+	.tab-content {
+		margin-top: 24px;
+	}
+	.tab-content p {
+		font-size: 18px;
+		margin-bottom: 20px;
+	}
+	.tab-content .spec-con p {
+		line-height: 36px;
+		padding-left: 20px;
+	}
+}

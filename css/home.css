@@ -157,12 +157,15 @@ border: 0;
 		width: 100%;
 	}
 	#welcome h1 {
-		font-size: 22px;
+		font-size: 18px;
 		margin: 0;
 		line-height: 60px;
 	}
 	#welcome hr {
 		width: 100%;
+	}
+	#welcome p {
+		font-size: 18px;
 	}
 	#home-product {
 		width: 100%;
@@ -188,12 +191,12 @@ border: 0;
 		width: 100%;
 	}
 	.evaluate h1 {
-		font-size: 22px;
+		font-size: 18px;
 		margin: 0;
 		margin-top: 30px;
 	}
 	.evaluate li {
+		font-size: 18px;
 		height: auto;
 	}
-	
 }

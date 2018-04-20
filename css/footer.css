@@ -96,11 +96,13 @@
 }
 @media (max-width: 414px) {
 	#footer {
+		margin-top: 50px;
 		height: auto;
 	}
 	#footer-con {
 		padding: 40px 0;
 		width: 100%;
+		font-size: 18px;
 	}
 	#search {
 		float: none;
@@ -114,6 +116,7 @@
 		position: relative;
 		left: 50%;
 		transform: translateX(-50%);
+		height: 40px;
 	}
 	#share-wrap {
 		margin-top: 22px;

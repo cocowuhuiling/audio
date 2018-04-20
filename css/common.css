@@ -90,3 +90,9 @@ border: none;
 	background: url(../icon/arrow-p.svg) center center no-repeat #a97d1f;
 	background-size: 18px 18px;
 }
+@media(max-width: 414px) {
+	#page-wrap {
+		width: 100%;
+		margin-top: 20px;
+	}
+}
