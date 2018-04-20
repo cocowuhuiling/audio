@@ -20,7 +20,7 @@
 		});
 		// 监听滚动条事件
 		$(window).scroll(function() {
-			while($(window).width()>414){
+			if($(window).width()>414){
 				var height= $(document).scrollTop();
 				if(height>185) {
 					$("#logo").hide();
@@ -35,32 +35,36 @@
 		});
 		//手机端
 		var menuOnPhone = function() {
-			while($(window).width()<=414) {
+			if($(window).width()<=414) {
 				$(".menu").on("click",function() {
 					$("#nav-wrap").fadeIn();
 				});
 				$(".menux").on("click",function() {
 					$("#nav-wrap").fadeOut();
-				})
-			}
-		};
-		menuOnPhone()
-		
-
-		var hoverOnNavForPC = function() {
-			while($(window).width()>414) {
-				$(".nav-list").on("hover",function() {
-					var curSubNav = $(this).find(".sub-nav");
-					// $(".sub-nav").hide();
-					curSubNav.show();
 				});
 			}
-		}
-		hoverOnNavForPC();
+		};
+
+		var subNavOnPhone = function() {
+			$(".nav-list .arrow").on("click",function(event) {
+				event.stopPropagation();
+				event.preventDefault();
+				var subNav =$(this).parent().find(".sub-nav");
+				var subShow = $(this).parent().find(".sub-nav").hasClass("sub-show");
+				console.log(subShow);
+				if(subShow) {
+					subNav.removeClass("sub-show");
+				}else {
+					subNav.addClass("sub-show");
+				}
+				
+			});
+		};
+		menuOnPhone();
+		subNavOnPhone();
 
 		$(window).on("resize",function() {
 			menuOnPhone();
-			hoverOnNavForPC();
 		});
 		
 	});

@@ -77,31 +77,10 @@
 	width: 25px;
 	height: 18px;
 	background: url(../icon/arrow-black.png) center center no-repeat;
+	background-size: 25px auto;
 }
-/*#nav a:hover {
-	color: #91650e;
-}
-#nav a:hover >.arrow {
-	background: url(../icon/arrow.png) center center no-repeat;
-}
-#nav a:hover >.sub-nav {
-	display: block;
-
-}
-#nav .active {
-	color: #91650e;
-}
-#nav .active .arrow {
-	background: url(../icon/arrow.png) center center no-repeat;
-}
-#nav .arrow {
-	display: inline-block;
-	width: 25px;
-	height: 18px;
-	background: url(../icon/arrow-black.png) center center no-repeat;
-}*/
 /* 二级目录 */
-#nav .sub-nav {
+.sub-nav {
 	display: none;
 	position: absolute;
 	width: 300px;
@@ -111,14 +90,27 @@
 	padding: 24px 0;
 	z-index: 99;
 }
-#nav .sub-nav li {
+.sub-nav li {
 	padding-left: 18px;
 	font-weight: 100;
 	font-size: 22px;
 }
-#nav .sub-nav li:hover {
+.sub-nav li a:hover {
 	color: #91650e;
 }
+@media (min-width: 414px) {
+	.nav-list:hover >a {
+		color: #91650e;
+	}
+	.nav-list:hover >.sub-nav {
+		display: block;
+	}
+	.nav-list:hover >.arrow {
+		background: url(../icon/arrow-yellow.png) center center no-repeat;
+		background-size: 25px auto;
+	}
+}
+
 @media (max-width: 414px) {
 	/* 导航 */
 	#header-wrap {
@@ -161,9 +153,14 @@
 		display: none;
 	}
 	#nav {
+		padding-top: 40px;
 		width: 100%;
 		height: 100%;
 		background-color: #000;
+	}
+	#nav .nav-list {
+		width: 60%;
+		display: block;
 	}
 	#nav a {
 		display: block;
@@ -171,5 +168,14 @@
 		width: 40%;
 		text-align: left;
 		padding-left: 20px;
+	}
+	.nav-list .arrow {
+		width: 25px;
+    height: 18px;
+		background: url(../icon/arrow-white.png) center center no-repeat;
+		background-size: 25px auto;
+	}
+	.sub-show {
+		display: block;
 	}
 }
