@@ -50,7 +50,6 @@ var homeEvaluate = function() {
 		url:"https://2be1dd65-2f85-4018-a17c-784b9bd4693a.mock.pstmn.io/main/evaluates?lang=en",
 		success: function(response) {
 			$(".evaluate").empty();
-			console.log(response.result.evaluates);
 			$.each(response.result.evaluates,function(index,content) {
 				var element = '<li><p class="eva-con">' +content.evaluate+ '</p><p class="author clearfix">'+"--"+content.company+content.reviewer+'</p></li>';
 				$(".evaluate").append(element);
@@ -58,8 +57,6 @@ var homeEvaluate = function() {
 		}
 	})
 }
-
-
 
 // homeslick();
 homeProduct();
@@ -74,7 +71,6 @@ var productSubNav = function(argument) {
 		url:"https://2be1dd65-2f85-4018-a17c-784b9bd4693a.mock.pstmn.io/category/list?lang=en",
 		success: function(response) {
 			$("#product-nav").empty();
-			console.log($("#product-nav"));
 			$.each(response.result.categories,function(index,content) {
 				var element = '<li><a href="">'+content.name+'</a></li>';
 				$("#product-nav").append(element);
@@ -93,7 +89,6 @@ var brandSubNav = function(argument) {
 		url:"https://2be1dd65-2f85-4018-a17c-784b9bd4693a.mock.pstmn.io/brands/list?lang=en",
 		success: function(response) {
 			$("#brand-nav").empty();
-			console.log($("#brand-nav"));
 			$.each(response.result.brands,function(index,content) {
 				var element = '<li><a href="">'+content.name+'</a></li>';
 				$("#brand-nav").append(element);
@@ -104,6 +99,43 @@ var brandSubNav = function(argument) {
 		},
 	});
 }
+// 服务二级目录
+var serviceSubNav = function() {
+	$.ajax({
+		dataType: "json",
+		url:"https://2be1dd65-2f85-4018-a17c-784b9bd4693a.mock.pstmn.io/service/list?lang=en",
+		success: function(response) {
+			$("#service-nav").empty();
+			$.each(response.result.services,function(index,content) {
+				var element = '<li><a href="">'+content.name+'</a></li>';
+				$("#service-nav").append(element);
+			});
+
+			
+			$("#loading").hide();
+		},
+	});
+}
 
 productSubNav();
 brandSubNav();
+serviceSubNav();
+
+// about页面 这是一个有问题的函数
+var aboutPage = function() {
+	$.ajax({
+		dataType: "json",
+		url:"https://2be1dd65-2f85-4018-a17c-784b9bd4693a.mock.pstmn.io/aboutus?lang=en",
+		success: function(response) {
+			$.each(response.result,function(index,content) {
+				console.log("test");
+				$(".about").text(content.description);
+				$(".tel").text(content.description.phone);
+				$(".email").text(content.description.email);
+			});
+			$("#loading").hide();
+		},
+	});
+}
+aboutPage();
+
