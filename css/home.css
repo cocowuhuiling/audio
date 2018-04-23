@@ -1,6 +1,6 @@
 #slick {
 	position: relative;
-	width: 1920px;
+	max-width: 1920px;
 	height: 700px;
 }
 #slick .slick-arrow {
@@ -15,6 +15,9 @@
 	border-width: 0;
 	font-size: 0;
 	cursor: pointer;
+}
+#slick img {
+	width: 100%;
 }
 #slick .slick-arrow:focus {
 outline: 0;
@@ -104,7 +107,7 @@ border: 0;
 	width: 1140px;
 	margin: 0 auto;
 }
-.evaluate h1 {
+.evaluate-title {
 	margin: 60px 0;
 	text-align: center;
 }
@@ -190,7 +193,7 @@ border: 0;
 	.evaluate {
 		width: 100%;
 	}
-	.evaluate h1 {
+	.evaluate-title {
 		font-size: 18px;
 		margin: 0;
 		margin-top: 30px;
