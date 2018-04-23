@@ -64,3 +64,46 @@ var homeEvaluate = function() {
 // homeslick();
 homeProduct();
 homeEvaluate();
+
+
+// 产品二级目录
+var productSubNav = function(argument) {
+	
+	$.ajax({
+		dataType: "json",
+		url:"https://2be1dd65-2f85-4018-a17c-784b9bd4693a.mock.pstmn.io/category/list?lang=en",
+		success: function(response) {
+			$("#product-nav").empty();
+			console.log($("#product-nav"));
+			$.each(response.result.categories,function(index,content) {
+				var element = '<li><a href="">'+content.name+'</a></li>';
+				$("#product-nav").append(element);
+			});
+
+			
+			$("#loading").hide();
+		},
+	});
+}
+// 品牌二级目录
+var brandSubNav = function(argument) {
+	
+	$.ajax({
+		dataType: "json",
+		url:"https://2be1dd65-2f85-4018-a17c-784b9bd4693a.mock.pstmn.io/brands/list?lang=en",
+		success: function(response) {
+			$("#brand-nav").empty();
+			console.log($("#brand-nav"));
+			$.each(response.result.brands,function(index,content) {
+				var element = '<li><a href="">'+content.name+'</a></li>';
+				$("#brand-nav").append(element);
+			});
+
+			
+			$("#loading").hide();
+		},
+	});
+}
+
+productSubNav();
+brandSubNav();
