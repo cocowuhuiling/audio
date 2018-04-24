@@ -17,16 +17,16 @@ var homeslick =	function() {
 		  	dots: true,
 		  });
 
-			
+
 			$("#loading").hide();
 		},
 	});
-}		
+}
 
 
 // 首页推荐接口
 
-var homeProduct = function() {			
+var homeProduct = function() {
 	$.ajax({
 		dataType: "json",
 		url:"https://2be1dd65-2f85-4018-a17c-784b9bd4693a.mock.pstmn.io/main/tops?lang=en",
@@ -65,7 +65,7 @@ homeEvaluate();
 
 // 产品二级目录
 var productSubNav = function(argument) {
-	
+
 	$.ajax({
 		dataType: "json",
 		url:"https://2be1dd65-2f85-4018-a17c-784b9bd4693a.mock.pstmn.io/category/list?lang=en",
@@ -76,14 +76,14 @@ var productSubNav = function(argument) {
 				$("#product-nav").append(element);
 			});
 
-			
+
 			$("#loading").hide();
 		},
 	});
 }
 // 品牌二级目录
 var brandSubNav = function(argument) {
-	
+
 	$.ajax({
 		dataType: "json",
 		url:"https://2be1dd65-2f85-4018-a17c-784b9bd4693a.mock.pstmn.io/brands/list?lang=en",
@@ -94,7 +94,7 @@ var brandSubNav = function(argument) {
 				$("#brand-nav").append(element);
 			});
 
-			
+
 			$("#loading").hide();
 		},
 	});
@@ -111,7 +111,7 @@ var serviceSubNav = function() {
 				$("#service-nav").append(element);
 			});
 
-			
+
 			$("#loading").hide();
 		},
 	});
@@ -121,7 +121,6 @@ productSubNav();
 brandSubNav();
 serviceSubNav();
 
-// about页面 这是一个有问题的函数
 var aboutPage = function() {
 	$.ajax({
 		dataType: "json",
@@ -130,8 +129,8 @@ var aboutPage = function() {
 			$.each(response.result,function(index,content) {
 				console.log("test");
 				$(".about").text(content.description);
-				$(".tel").text(content.description.phone);
-				$(".email").text(content.description.email);
+				$(".tel").text(content.phone);
+				$(".email").text(content.email);
 			});
 			$("#loading").hide();
 		},
