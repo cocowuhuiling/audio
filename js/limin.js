@@ -8,7 +8,13 @@
 	  $("#share").jsSocials({
 		  showLabel: false,
 		  // showCount: false,
-		  shares: ["email", "twitter", "facebook", "googleplus"]
+      // 上线之后再调用facebook share
+      /**
+       * Face book share 要求被分享网页必须公网可访问
+       * 网页应该添加必要的og tag，参考
+       * https://developers.facebook.com/docs/sharing/webmasters#markup
+      */
+      shares: ["email", "twitter",/* "facebook",*/ "googleplus"]
 		});
 		// 产品详情选项卡
 		$(".tab-title li").on("click",function(){
