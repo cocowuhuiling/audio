@@ -6,7 +6,8 @@ var homeslick =	function() {
 		dataType: "json",
 		url:"https://2be1dd65-2f85-4018-a17c-784b9bd4693a.mock.pstmn.io/main/albums?lang=en",
 		success: function(response) {
-			$("#slick").empty();
+      /*
+      $("#slick").empty();
 			$.each(response.result.albums,function(index,content) {
 				var imgStr = "<img src="+content+">";
 				$("#slick").append(imgStr);
@@ -15,14 +16,22 @@ var homeslick =	function() {
 		  $('#slick').slick({
 		  	dots: true,
 		  });
+      */
+      //$('#slick').slick('unslick');
+      var _imgArray = response.result.albums;
+      _imgArray.forEach(function(elm,index){
+        $('#slick').slick('slickRemove',0);
+        $('#slick').slick('slickAdd',"<img src="+elm+">");
+      });
+			$("#loading").hide();
 		},
 	});
-}		
+}
 
 
 // 首页推荐接口
 
-var homeProduct = function() {			
+var homeProduct = function() {
 	$.ajax({
 		dataType: "json",
 		url:"https://2be1dd65-2f85-4018-a17c-784b9bd4693a.mock.pstmn.io/main/tops?lang=en",
@@ -53,14 +62,14 @@ var homeEvaluate = function() {
 	})
 }
 
-// homeslick();
+homeslick();
 homeProduct();
 homeEvaluate();
 
 
 // 产品二级目录
 var productSubNav = function(argument) {
-	
+
 	$.ajax({
 		dataType: "json",
 		url:"https://2be1dd65-2f85-4018-a17c-784b9bd4693a.mock.pstmn.io/category/list?lang=en",
@@ -71,12 +80,15 @@ var productSubNav = function(argument) {
 				var element = '<li><a href="">'+content.name+'</a></li>';
 				$("#product-nav").append(element);
 			});
+
+			$("#loading").hide();
+
 		},
 	});
 }
 // 品牌二级目录
 var brandSubNav = function(argument) {
-	
+
 	$.ajax({
 		dataType: "json",
 		url:"https://2be1dd65-2f85-4018-a17c-784b9bd4693a.mock.pstmn.io/brands/list?lang=en",
@@ -86,6 +98,10 @@ var brandSubNav = function(argument) {
 				var element = '<li><a href="">'+content.name+'</a></li>';
 				$("#brand-nav").append(element);
 			});
+
+
+			$("#loading").hide();
+
 		},
 	});
 }
@@ -100,6 +116,10 @@ var serviceSubNav = function() {
 				var element = '<li><a href="">'+content.name+'</a></li>';
 				$("#service-nav").append(element);
 			});
+
+
+			$("#loading").hide();
+
 		},
 	});
 }
@@ -108,13 +128,13 @@ productSubNav();
 brandSubNav();
 serviceSubNav();
 
-// about页面 这是一个有问题的函数
 var aboutPage = function() {
 	$.ajax({
 		dataType: "json",
 		url:"https://2be1dd65-2f85-4018-a17c-784b9bd4693a.mock.pstmn.io/aboutus?lang=en",
 		success: function(response) {
 			$.each(response.result,function(index,content) {
+
 				console.log(content);
 				$(".about").text("content.description");
 				$(".tel").text(content.phone);
