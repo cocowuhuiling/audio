@@ -1,7 +1,8 @@
 #slick {
 	position: relative;
 	max-width: 1920px;
-	height: 700px;
+	max-height: 700px;
+	overflow: hidden;
 }
 #slick .slick-arrow {
 	position: absolute;
@@ -18,6 +19,7 @@
 }
 #slick img {
 	width: 100%;
+	height: 100%;
 }
 #slick .slick-arrow:focus {
 outline: 0;
