@@ -1,18 +1,24 @@
 
 // 首页轮播图
+var homeSlickFlag=0;
+var homeProductFlag=0;
+var homeEvaluateFlag=0;
+var getNavDataFlag=0;
+var aboutPageFlag=0;
+
 
 var G_server = "https://da28facf-fd45-4a4e-9927-686e020f9a8c.mock.pstmn.io";
 var homeslick =	function() {
 	$.ajax({
 		dataType: "json",
 		url:G_server+"/main/albums?lang=en",
+		async:true,
 		success: function(response) {
       var _imgArray = response.result.albums;
       $.each(_imgArray,function(index,content) {
       	var slickImageUrl = G_server+"/main/albums?lang=en&"+"id="+content.id;
       	// $('#slick').slick('slickRemove',0);
         $('#slick').slick('slickAdd',"<a href="+slickImageUrl+"><img src="+content.imgUrl+"></a>");
-				$("#loading").hide();
       });
 		},
 	});
@@ -26,18 +32,17 @@ var homeProduct = function() {
 		dataType: "json",
 		url:G_server+"/main/tops?lang=en",
 		success: function(response) {
-
 			$("#welcome h1").text(response.result.info.title);
 			$("#welcome p").text(response.result.info.desc);
 			$("#home-product").empty();
 			$.each(response.result.info.products,function(index,content) {
 				var homeProductUrl = G_server+"/main/tops?lang=en&"+"id="+content.id;
 				var element = '<li><a href='+homeProductUrl+'><img src=' +content.imgUrl+ '></a><h2>'+content.title+'</li>';
-
 				$("#home-product").append(element);
 			});
 		},
 	});
+				// homeProductFlag=1;
 }
 // 首页评价
 var homeEvaluate = function() {
@@ -52,6 +57,8 @@ var homeEvaluate = function() {
 			});
 		}
 	})
+				// homeEvaluateFlag=1;
+
 }
 
 
@@ -90,6 +97,8 @@ var getNavData = function(argument) {
 			});
 		},
 	});
+			// getNavDataFlag=1;
+
 }
 
 var aboutPage = function() {
@@ -102,6 +111,8 @@ var aboutPage = function() {
 				$(".email").text(response.result.email);
 		},
 	});
+				// aboutPageFlag=1;
+
 }
 
 var allProducts = function() {
@@ -126,5 +137,17 @@ homeProduct();
 homeEvaluate();
 getNavData();
 aboutPage();
-allProducts();
+// allProducts();
+        console.log(homeSlickFlag);
 
+var loadHideFlag = homeSlickFlag&&homeProductFlag&&homeEvaluateFlag&&getNavDataFlag&&aboutPageFlag;
+// console.log(loadHideFlag);
+var loadHide = function() {
+	// console.log(loadHideFlag);
+	if(loadHideFlag) {
+		// $("#loading").hide();
+	}
+}
+
+loadHide();
+$("#loading").hide();

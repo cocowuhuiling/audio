@@ -72,8 +72,5 @@
 		$(window).on("resize",function() {
 			menuOnPhone();
 		});
-
-
-		// $("img.lazyload").lazyload();
 		
 	});
