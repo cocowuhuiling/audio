@@ -1,15 +1,18 @@
 
 // 首页轮播图
-var G_server = "https://bcbb165f-864a-47a4-9487-964633ee5813.mock.pstmn.io";
+
+var G_server = "https://da28facf-fd45-4a4e-9927-686e020f9a8c.mock.pstmn.io";
 var homeslick =	function() {
 	$.ajax({
 		dataType: "json",
 		url:G_server+"/main/albums?lang=en",
 		success: function(response) {
       var _imgArray = response.result.albums;
-      _imgArray.forEach(function(elm,index){
-        $('#slick').slick('slickRemove',0);
-        $('#slick').slick('slickAdd',"<img src="+elm+">");
+      $.each(_imgArray,function(index,content) {
+      	var slickImageUrl = G_server+"/main/albums?lang=en&"+"id="+content.id;
+      	// $('#slick').slick('slickRemove',0);
+        $('#slick').slick('slickAdd',"<a href="+slickImageUrl+"><img src="+content.imgUrl+"></a>");
+				$("#loading").hide();
       });
 		},
 	});
@@ -28,7 +31,9 @@ var homeProduct = function() {
 			$("#welcome p").text(response.result.info.desc);
 			$("#home-product").empty();
 			$.each(response.result.info.products,function(index,content) {
-				var element = '<li><a href=""><img src=' +content.imgUrl+ '></a><h2>'+content.title+'</li>';
+				var homeProductUrl = G_server+"/main/tops?lang=en&"+"id="+content.id;
+				var element = '<li><a href='+homeProductUrl+'><img src=' +content.imgUrl+ '></a><h2>'+content.title+'</li>';
+
 				$("#home-product").append(element);
 			});
 		},
@@ -49,75 +54,36 @@ var homeEvaluate = function() {
 	})
 }
 
-homeslick();
-homeProduct();
-homeEvaluate();
 
-
-// 产品二级目录
-var productSubNav = function(argument) {
+// 菜单
+var getNavData = function(argument) {
 
 	$.ajax({
 		dataType: "json",
 		url:G_server+"/menu/list?lang=en",
 		success: function(response) {
-
-			$("#product-nav").empty();
-		
-			$.each(response.result.menu,function(index,content) {
-
-					var name = content.name;
-					switch (name) {
-						case "home":
-						console.log("home");
-						break;
-						case "products":
-						console.log("products");
-						break;
-						case "brands":
-						console.log("brands");
-						break;
-						case "news":
-						console.log("news");
-						break;
-						case "services":
-						console.log("services");
-						break;
-						case "aboutus":
-						console.log("aboutus");
-						break;
-					}
-				// var subUrl = G_server+"/category/list?lang=en&"+"id="+content.id;
-				// var element = '<li><a href="'+subUrl+'">'+content.name+'</a></li>';
-				// $("#product-nav").append(element);
+			// 一级目录
+			$.each(response.result,function(index,content) {
+				$.each($(".nav-list"),function(index,content) {
+						$(".nav-list").text(content.name);
+				});
 			});
-		},
-	});
-}
-// 品牌二级目录
-var brandSubNav = function(argument) {
-
-	$.ajax({
-		dataType: "json",
-		url:G_server+"/brands/list?lang=en",
-		success: function(response) {
+			// 二级目录
+			$("#product-nav").empty();
 			$("#brand-nav").empty();
-			$.each(response.result.brands,function(index,content) {
+			$("#service-nav").empty();
+			
+			$.each(response.result.product.sub,function(index,content) {
+				var subUrl = G_server+"/category/list?lang=en&"+"id="+content.id;
+				var element = '<li><a href="'+subUrl+'">'+content.name+'</a></li>';
+				$("#product-nav").append(element);
+			});
+			$.each(response.result.brands.sub,function(index,content) {
 				var subUrl = G_server+"/brands/list?lang=en&"+"id="+content.id;
 				var element = '<li><a href="'+subUrl+'">'+content.name+'</a></li>';
 				$("#brand-nav").append(element);
 			});
-		},
-	});
-}
-// 服务二级目录
-var serviceSubNav = function() {
-	$.ajax({
-		dataType: "json",
-		url:G_server+"/service/list?lang=en",
-		success: function(response) {
-			$("#service-nav").empty();
-			$.each(response.result.services,function(index,content) {
+				$.each(response.result.services.sub,function(index,content) {
 				var subUrl = G_server+"/service/list?lang=en&"+"id="+content.id;
 				var element = '<li><a href="'+subUrl+'">'+content.name+'</a></li>';
 				$("#service-nav").append(element);
@@ -125,10 +91,6 @@ var serviceSubNav = function() {
 		},
 	});
 }
-
-productSubNav();
-brandSubNav();
-serviceSubNav();
 
 var aboutPage = function() {
 	$.ajax({
@@ -141,6 +103,28 @@ var aboutPage = function() {
 		},
 	});
 }
-aboutPage();
 
-$("#loading").hide();
+var allProducts = function() {
+	$.ajax({
+		dataType: "json",
+		url:G_server+"/product/byCategory?lang=en&cid=1&psize=5&pindex=1",
+		success: function(response) {
+					$("#product-list").empty();
+
+				$.each(response.result.products,function(index,content) {
+					var proDetailUrl = G_server+"/product/byCategory?lang=en&cid=1&psize=5&pindex=1&"+"id="+content.id;
+					var element = "<li><a href="+proDetailUrl+"><img src="+content.imgUrl+"></a><h2>"+content.name+"</h2></li>";
+					$("#product-list").append(element);
+				})
+		},
+	})
+}
+
+
+homeslick();
+homeProduct();
+homeEvaluate();
+getNavData();
+aboutPage();
+allProducts();
+
