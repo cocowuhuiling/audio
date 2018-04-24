@@ -12,12 +12,10 @@ var homeslick =	function() {
 				var imgStr = "<img src="+content+">";
 				$("#slick").append(imgStr);
 			});
-
 			// 轮播图
 		  $('#slick').slick({
 		  	dots: true,
 		  });
-
       */
       //$('#slick').slick('unslick');
       var _imgArray = response.result.albums;
@@ -46,7 +44,6 @@ var homeProduct = function() {
 				var element = '<li><a href=""><img src=' +content.imgUrl+ '></a><h2>'+content.title+'</li>';
 				$("#home-product").append(element);
 			});
-			$("#loading").hide();
 		},
 	});
 }
@@ -77,14 +74,15 @@ var productSubNav = function(argument) {
 		dataType: "json",
 		url:"https://2be1dd65-2f85-4018-a17c-784b9bd4693a.mock.pstmn.io/category/list?lang=en",
 		success: function(response) {
+
 			$("#product-nav").empty();
 			$.each(response.result.categories,function(index,content) {
 				var element = '<li><a href="">'+content.name+'</a></li>';
 				$("#product-nav").append(element);
 			});
 
-
 			$("#loading").hide();
+
 		},
 	});
 }
@@ -103,6 +101,7 @@ var brandSubNav = function(argument) {
 
 
 			$("#loading").hide();
+
 		},
 	});
 }
@@ -120,6 +119,7 @@ var serviceSubNav = function() {
 
 
 			$("#loading").hide();
+
 		},
 	});
 }
@@ -134,14 +134,15 @@ var aboutPage = function() {
 		url:"https://2be1dd65-2f85-4018-a17c-784b9bd4693a.mock.pstmn.io/aboutus?lang=en",
 		success: function(response) {
 			$.each(response.result,function(index,content) {
-				console.log("test");
-				$(".about").text(content.description);
+
+				console.log(content);
+				$(".about").text("content.description");
 				$(".tel").text(content.phone);
 				$(".email").text(content.email);
 			});
-			$("#loading").hide();
 		},
 	});
 }
-aboutPage();
+// aboutPage();
 
+$("#loading").hide();
