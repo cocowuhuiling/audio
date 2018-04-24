@@ -1,24 +1,13 @@
 
 // 首页轮播图
-
+var G_server = "https://bcbb165f-864a-47a4-9487-964633ee5813.mock.pstmn.io";
 var homeslick =	function() {
 	$.ajax({
 		dataType: "json",
-		url:"https://2be1dd65-2f85-4018-a17c-784b9bd4693a.mock.pstmn.io/main/albums?lang=en",
+		url:G_server+"/main/albums?lang=en",
 		success: function(response) {
-      /*
-      $("#slick").empty();
-			$.each(response.result.albums,function(index,content) {
-				var imgStr = "<img src="+content+">";
-				$("#slick").append(imgStr);
-			});
-			// 轮播图
-		  $('#slick').slick({
-		  	dots: true,
-		  });
-      */
-      //$('#slick').slick('unslick');
       var _imgArray = response.result.albums;
+      console.log(response.result)
       _imgArray.forEach(function(elm,index){
         $('#slick').slick('slickRemove',0);
         $('#slick').slick('slickAdd',"<img src="+elm+">");
@@ -34,7 +23,7 @@ var homeslick =	function() {
 var homeProduct = function() {
 	$.ajax({
 		dataType: "json",
-		url:"https://2be1dd65-2f85-4018-a17c-784b9bd4693a.mock.pstmn.io/main/tops?lang=en",
+		url:G_server+"/main/tops?lang=en",
 		success: function(response) {
 
 			$("#welcome h1").text(response.result.info.title);
@@ -51,7 +40,7 @@ var homeProduct = function() {
 var homeEvaluate = function() {
 	$.ajax({
 		dataType: "json",
-		url:"https://2be1dd65-2f85-4018-a17c-784b9bd4693a.mock.pstmn.io/main/evaluates?lang=en",
+		url:G_server+"/main/evaluates?lang=en",
 		success: function(response) {
 			$(".evaluate").empty();
 			$.each(response.result.evaluates,function(index,content) {
@@ -72,12 +61,13 @@ var productSubNav = function(argument) {
 
 	$.ajax({
 		dataType: "json",
-		url:"https://2be1dd65-2f85-4018-a17c-784b9bd4693a.mock.pstmn.io/category/list?lang=en",
+		url:G_server+"/category/list?lang=en",
 		success: function(response) {
 
 			$("#product-nav").empty();
 			$.each(response.result.categories,function(index,content) {
-				var element = '<li><a href="">'+content.name+'</a></li>';
+				var subUrl = G_server+"/category/list?lang=en&"+"id="+content.id;
+				var element = '<li><a href="'+subUrl+'">'+content.name+'</a></li>';
 				$("#product-nav").append(element);
 			});
 
@@ -91,11 +81,12 @@ var brandSubNav = function(argument) {
 
 	$.ajax({
 		dataType: "json",
-		url:"https://2be1dd65-2f85-4018-a17c-784b9bd4693a.mock.pstmn.io/brands/list?lang=en",
+		url:G_server+"/brands/list?lang=en",
 		success: function(response) {
 			$("#brand-nav").empty();
 			$.each(response.result.brands,function(index,content) {
-				var element = '<li><a href="">'+content.name+'</a></li>';
+				var subUrl = G_server+"/brands/list?lang=en&"+"id="+content.id;
+				var element = '<li><a href="'+subUrl+'">'+content.name+'</a></li>';
 				$("#brand-nav").append(element);
 			});
 
@@ -109,11 +100,12 @@ var brandSubNav = function(argument) {
 var serviceSubNav = function() {
 	$.ajax({
 		dataType: "json",
-		url:"https://2be1dd65-2f85-4018-a17c-784b9bd4693a.mock.pstmn.io/service/list?lang=en",
+		url:G_server+"/service/list?lang=en",
 		success: function(response) {
 			$("#service-nav").empty();
 			$.each(response.result.services,function(index,content) {
-				var element = '<li><a href="">'+content.name+'</a></li>';
+				var subUrl = G_server+"/service/list?lang=en&"+"id="+content.id;
+				var element = '<li><a href="'+subUrl+'">'+content.name+'</a></li>';
 				$("#service-nav").append(element);
 			});
 
@@ -131,18 +123,16 @@ serviceSubNav();
 var aboutPage = function() {
 	$.ajax({
 		dataType: "json",
-		url:"https://2be1dd65-2f85-4018-a17c-784b9bd4693a.mock.pstmn.io/aboutus?lang=en",
+		url:G_server+"/aboutus?lang=en",
 		success: function(response) {
-			$.each(response.result,function(index,content) {
 
-				console.log(content);
-				$(".about").text("content.description");
-				$(".tel").text(content.phone);
-				$(".email").text(content.email);
-			});
+				console.log(response);
+				$(".about").text(response.result.description);
+				$(".tel").text(response.result.phone);
+				$(".email").text(response.result.email);
 		},
 	});
 }
-// aboutPage();
+aboutPage();
 
 $("#loading").hide();

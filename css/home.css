@@ -20,6 +20,7 @@
 #slick img {
 	width: 100%;
 	height: 100%;
+	cursor: pointer;
 }
 #slick .slick-arrow:focus {
 outline: 0;
