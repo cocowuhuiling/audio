@@ -6,7 +6,8 @@ var homeslick =	function() {
 		dataType: "json",
 		url:"https://2be1dd65-2f85-4018-a17c-784b9bd4693a.mock.pstmn.io/main/albums?lang=en",
 		success: function(response) {
-			$("#slick").empty();
+      /*
+      $("#slick").empty();
 			$.each(response.result.albums,function(index,content) {
 				var imgStr = "<img src="+content+">";
 				$("#slick").append(imgStr);
@@ -17,7 +18,13 @@ var homeslick =	function() {
 		  	dots: true,
 		  });
 
-
+      */
+      //$('#slick').slick('unslick');
+      var _imgArray = response.result.albums;
+      _imgArray.forEach(function(elm,index){
+        $('#slick').slick('slickRemove',0);
+        $('#slick').slick('slickAdd',"<img src="+elm+">");
+      });
 			$("#loading").hide();
 		},
 	});
@@ -58,7 +65,7 @@ var homeEvaluate = function() {
 	})
 }
 
-// homeslick();
+homeslick();
 homeProduct();
 homeEvaluate();
 
