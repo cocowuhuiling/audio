@@ -7,12 +7,10 @@ var homeslick =	function() {
 		url:G_server+"/main/albums?lang=en",
 		success: function(response) {
       var _imgArray = response.result.albums;
-      console.log(response.result)
       _imgArray.forEach(function(elm,index){
         $('#slick').slick('slickRemove',0);
         $('#slick').slick('slickAdd',"<img src="+elm+">");
       });
-			$("#loading").hide();
 		},
 	});
 }
@@ -61,18 +59,38 @@ var productSubNav = function(argument) {
 
 	$.ajax({
 		dataType: "json",
-		url:G_server+"/category/list?lang=en",
+		url:G_server+"/menu/list?lang=en",
 		success: function(response) {
 
 			$("#product-nav").empty();
-			$.each(response.result.categories,function(index,content) {
-				var subUrl = G_server+"/category/list?lang=en&"+"id="+content.id;
-				var element = '<li><a href="'+subUrl+'">'+content.name+'</a></li>';
-				$("#product-nav").append(element);
+		
+			$.each(response.result.menu,function(index,content) {
+
+					var name = content.name;
+					switch (name) {
+						case "home":
+						console.log("home");
+						break;
+						case "products":
+						console.log("products");
+						break;
+						case "brands":
+						console.log("brands");
+						break;
+						case "news":
+						console.log("news");
+						break;
+						case "services":
+						console.log("services");
+						break;
+						case "aboutus":
+						console.log("aboutus");
+						break;
+					}
+				// var subUrl = G_server+"/category/list?lang=en&"+"id="+content.id;
+				// var element = '<li><a href="'+subUrl+'">'+content.name+'</a></li>';
+				// $("#product-nav").append(element);
 			});
-
-			$("#loading").hide();
-
 		},
 	});
 }
@@ -89,10 +107,6 @@ var brandSubNav = function(argument) {
 				var element = '<li><a href="'+subUrl+'">'+content.name+'</a></li>';
 				$("#brand-nav").append(element);
 			});
-
-
-			$("#loading").hide();
-
 		},
 	});
 }
@@ -108,10 +122,6 @@ var serviceSubNav = function() {
 				var element = '<li><a href="'+subUrl+'">'+content.name+'</a></li>';
 				$("#service-nav").append(element);
 			});
-
-
-			$("#loading").hide();
-
 		},
 	});
 }
@@ -125,8 +135,6 @@ var aboutPage = function() {
 		dataType: "json",
 		url:G_server+"/aboutus?lang=en",
 		success: function(response) {
-
-				console.log(response);
 				$(".about").text(response.result.description);
 				$(".tel").text(response.result.phone);
 				$(".email").text(response.result.email);
