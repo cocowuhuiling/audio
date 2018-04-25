@@ -115,16 +115,22 @@ border: 0;
 	text-align: center;
 }
 .evaluate li {
-	padding: 0 40px;
 	border-right: 1px solid #ddd;
-	width: 299px;
+	width: 326px;
 	height: 220px;
 	float: left;
 	color: #333;
 	font-family: Futura;
 	font-size: 22px;
 }
+.evaluate li:first-child {
+	padding-right: 40px;
+}
+.evaluate li:nth-child(2) {
+	padding: 0 40px;
+}
 .evaluate li:last-child {
+	padding-left: 40px;
 	border-right: 0;
 }
 .evaluate .eva-con {
