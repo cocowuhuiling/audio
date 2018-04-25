@@ -30,6 +30,8 @@
 }
 .news .right h1 {
 	font-size: 20px;
+}
+.news .right h1 a {
 	white-space:nowrap;
 	overflow:hidden;
 	text-overflow:ellipsis;

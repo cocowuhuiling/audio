@@ -1,0 +1,16 @@
+h1.china {
+	font-size: 22px!important;
+	font-family: 'Microsoft Yahei', '微软雅黑'!important;
+}
+p.china {
+	font-size: 18px!important;
+	font-family: 'Microsoft Yahei', '微软雅黑'!important;
+	text-align: left!important;
+}
+#news-wrap h1.china {
+	font-size: 20px!important;
+}
+#news-wrap p.china {
+	font-size: 16px!important;
+	line-height: 30px;
+}
