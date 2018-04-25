@@ -81,17 +81,17 @@ var getNavData = function(argument) {
 			$("#service-nav").empty();
 			
 			$.each(response.result.product.sub,function(index,content) {
-				var subUrl = G_server+"/category/list?lang=en&"+"id="+content.id;
+        var subUrl = "/product.html?lang=en&"+"id="+content.id;
 				var element = '<li><a href="'+subUrl+'">'+content.name+'</a></li>';
 				$("#product-nav").append(element);
 			});
 			$.each(response.result.brands.sub,function(index,content) {
-				var subUrl = G_server+"/brands/list?lang=en&"+"id="+content.id;
+        var subUrl = "/brand.html?lang=en&"+"id="+content.id;
 				var element = '<li><a href="'+subUrl+'">'+content.name+'</a></li>';
 				$("#brand-nav").append(element);
 			});
 				$.each(response.result.services.sub,function(index,content) {
-				var subUrl = G_server+"/service/list?lang=en&"+"id="+content.id;
+				var subUrl = "/service.html?lang=en&"+"id="+content.id;
 				var element = '<li><a href="'+subUrl+'">'+content.name+'</a></li>';
 				$("#service-nav").append(element);
 			});
