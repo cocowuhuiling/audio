@@ -20,6 +20,7 @@
 }
 #logo img {
 	margin: 0 auto;
+	cursor: pointer;
 }
 #language {
 	position: absolute;
