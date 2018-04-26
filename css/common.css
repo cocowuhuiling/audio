@@ -1,11 +1,9 @@
-@font-face {
-	font-family: Citadina;
-	src: url("../font/CitadinaRegular.otf");
-}
+/* 标题字体 */
 @font-face {
 	font-family: Anodina-Regular;
 	src: url("../font/Anodina-Regular.otf");
 }
+/* 正文字体 */
 @font-face {
 	font-family: Futura;
 	src: url("../font/FuturaNo2DEE.ttf");
@@ -29,7 +27,6 @@ h1,ul,hr,p {
 	padding: 0;
 }
 h1,h2 {
-	font-family: Citadina;
 	font-weight: 500;
 }
 hr {
