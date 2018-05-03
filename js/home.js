@@ -79,7 +79,7 @@ var getNavData = function(argument) {
 			$("#product-nav").empty();
 			$("#brand-nav").empty();
 			$("#service-nav").empty();
-			
+
 			$.each(response.result.product.sub,function(index,content) {
         var subUrl = "/product.html?lang=en&"+"id="+content.id;
 				var element = '<li><a href="'+subUrl+'">'+content.name+'</a></li>';
@@ -90,14 +90,13 @@ var getNavData = function(argument) {
 				var element = '<li><a href="'+subUrl+'">'+content.name+'</a></li>';
 				$("#brand-nav").append(element);
 			});
-				$.each(response.result.services.sub,function(index,content) {
-				var subUrl = "/service.html?lang=en&"+"id="+content.id;
+      $.each(response.result.services.sub,function(index,content) {
+				var subUrl = "/service-detail.html?lang=en&"+"id="+content.id;
 				var element = '<li><a href="'+subUrl+'">'+content.name+'</a></li>';
 				$("#service-nav").append(element);
 			});
 		},
 	});
-			// getNavDataFlag=1;
 
 }
 
@@ -106,9 +105,11 @@ var aboutPage = function() {
 		dataType: "json",
 		url:G_server+"/aboutus?lang=en",
 		success: function(response) {
+    /*
 				$(".about").text(response.result.description);
 				$(".tel").text(response.result.phone);
 				$(".email").text(response.result.email);
+        */
 		},
 	});
 				// aboutPageFlag=1;
@@ -135,7 +136,7 @@ var allProducts = function() {
 homeslick();
 homeProduct();
 homeEvaluate();
-getNavData();
+//getNavData();
 aboutPage();
 // allProducts();
         console.log(homeSlickFlag);
