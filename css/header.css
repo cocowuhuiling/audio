@@ -18,9 +18,18 @@
 #nav-wrap .menux {
 	display: none;
 }
-#logo img {
+#logo {
+  width: 500px;
+  height: 69px;
 	margin: 0 auto;
 }
+
+#logo img {
+	margin: 0 auto;
+  width: 100%;
+  margin: 0 auto;
+}
+
 #language {
 	position: absolute;
 	right: 0;
@@ -120,6 +129,10 @@
 	#header {
 		width: 100%;
 	}
+  #logo{
+    height: auto;
+    width: 90%;
+  }
 	#logo img {
 		width: 60%;
 		height: auto;
