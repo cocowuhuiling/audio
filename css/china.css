@@ -1,0 +1,31 @@
+/* 首页 */
+#welcome h1.china,
+#eva-title h1.china {
+	font-size: 22px;
+	font-family: 'Microsoft Yahei', '微软雅黑';
+}
+#welcome p.china,
+.evaluate p.china,
+.news-detail p.china {
+	font-size: 18px;
+	font-family: 'Microsoft Yahei', '微软雅黑';
+	text-align: left;
+	line-height: 32px;
+}
+/* 新闻页面 */
+#news-wrap h1.china {
+	font-size: 20px;
+	font-family: 'Microsoft Yahei', '微软雅黑';
+
+}
+#news-wrap p.china {
+	font-size: 17px;
+	line-height: 30px;
+	font-family: 'Microsoft Yahei', '微软雅黑';
+
+}
+/* 产品详情 */
+.tab-content p.china {
+	font-size: 18px;
+	text-align: left;
+}

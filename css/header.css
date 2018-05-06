@@ -27,7 +27,7 @@
 #logo img {
 	margin: 0 auto;
   width: 100%;
-  margin: 0 auto;
+	cursor: pointer;
 }
 
 #language {
@@ -76,7 +76,7 @@
 	color: #fff;
 }
 .nav-list .active {
-	color: #91650e;
+	color: #a97d1f;
 }
 .nav-list .arrow {
 	position: absolute;
@@ -106,11 +106,11 @@
 	font-size: 22px;
 }
 .sub-nav li a:hover {
-	color: #91650e;
+	color: #a97d1f;
 }
 @media (min-width: 414px) {
 	.nav-list:hover >a {
-		color: #91650e;
+		color: #a97d1f;
 	}
 	.nav-list:hover >.sub-nav {
 		display: block;

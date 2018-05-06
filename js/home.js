@@ -1,12 +1,3 @@
-
-// 首页轮播图
-var homeSlickFlag=0;
-var homeProductFlag=0;
-var homeEvaluateFlag=0;
-var getNavDataFlag=0;
-var aboutPageFlag=0;
-
-
 var G_server = "https://da28facf-fd45-4a4e-9927-686e020f9a8c.mock.pstmn.io";
 var homeslick =	function() {
 	$.ajax({
@@ -42,7 +33,6 @@ var homeProduct = function() {
 			});
 		},
 	});
-				// homeProductFlag=1;
 }
 // 首页评价
 var homeEvaluate = function() {
@@ -57,8 +47,6 @@ var homeEvaluate = function() {
 			});
 		}
 	})
-				// homeEvaluateFlag=1;
-
 }
 
 
@@ -97,7 +85,6 @@ var getNavData = function(argument) {
 			});
 		},
 	});
-
 }
 
 var aboutPage = function() {
@@ -112,8 +99,6 @@ var aboutPage = function() {
         */
 		},
 	});
-				// aboutPageFlag=1;
-
 }
 
 var allProducts = function() {
@@ -139,16 +124,3 @@ homeEvaluate();
 //getNavData();
 aboutPage();
 // allProducts();
-        console.log(homeSlickFlag);
-
-var loadHideFlag = homeSlickFlag&&homeProductFlag&&homeEvaluateFlag&&getNavDataFlag&&aboutPageFlag;
-// console.log(loadHideFlag);
-var loadHide = function() {
-	// console.log(loadHideFlag);
-	if(loadHideFlag) {
-		// $("#loading").hide();
-	}
-}
-
-loadHide();
-$("#loading").hide();

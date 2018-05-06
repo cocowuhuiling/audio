@@ -30,10 +30,16 @@
 }
 .news .right h1 {
 	font-size: 20px;
-	color: #333;
+}
+.news .right h1 a {
 	white-space:nowrap;
 	overflow:hidden;
 	text-overflow:ellipsis;
+}
+.news .right h1 a,
+.news .right p a,
+.news .right .more a {
+	color: #000;
 }
 .news .right .date {
 	margin-top: 17px;
@@ -45,12 +51,17 @@
 .news .right p {
 	font-size: 22px;
 	font-family: Futura;
+	word-break: break-all;
+  text-overflow: ellipsis;
+  display: -webkit-box; /** 对象作为伸缩盒子模型显示 **/
+  -webkit-box-orient: vertical; /** 设置或检索伸缩盒对象的子元素的排列方式 **/
+  -webkit-line-clamp: 4; /** 显示的行数 **/
+  overflow: hidden;  /** 隐藏超出的内容 **/
 }
 .news .right .more {
 	margin-top: 50px;
 	display: block;
 	text-align: right;
-	font-family: Futura;
 }
 
 /* 新闻详情 */
