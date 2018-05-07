@@ -19,17 +19,14 @@
 	display: none;
 }
 #logo {
-  width: 500px;
-  height: 69px;
 	margin: 0 auto;
+	width: 500px;
 }
-
 #logo img {
+	width: 100%;
 	margin: 0 auto;
-  width: 100%;
 	cursor: pointer;
 }
-
 #language {
 	position: absolute;
 	right: 0;
@@ -78,6 +75,10 @@
 .nav-list .active {
 	color: #a97d1f;
 }
+.nav-list .active.arrow {
+	background: url(../icon/arrow-yellow.png) center center no-repeat;
+	background-size: 25px auto;
+}
 .nav-list .arrow {
 	position: absolute;
   top: 50%;
@@ -93,7 +94,7 @@
 .sub-nav {
 	display: none;
 	position: absolute;
-	width: 300px;
+	width: 345px;
 	background-color: #000;
 	color: #fff;
 	text-align: left;
@@ -125,14 +126,14 @@
 	/* 导航 */
 	#header-wrap {
 		margin-bottom: 0;
+		padding: 16px 0;
 	}
 	#header {
 		width: 100%;
 	}
-  #logo{
-    height: auto;
-    width: 90%;
-  }
+	#logo {
+		width: 99%;
+	}
 	#logo img {
 		width: 60%;
 		height: auto;
@@ -180,7 +181,7 @@
 	}
 	.nav-list .arrow {
 		top: 25px;
-		transform: translate(0,0);
+		transform: translate(-260%,0);
 	}
 	#nav a {
 		display: block;
@@ -188,6 +189,9 @@
 		width: 40%;
 		text-align: left;
 		padding-left: 20px;
+	}
+	#nav .nav-list a.active {
+    color: #a97d1f;
 	}
 	.sub-nav {
 		position: initial;

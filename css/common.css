@@ -54,6 +54,7 @@ border: none;
 
 /* 分页 */
 #page-wrap {
+	display: none;
 	width: 1140px;
 	margin: 0 auto;
 	margin-top: 56px;

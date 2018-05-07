@@ -57,7 +57,7 @@ border: 0;
 }
 #welcome p {
 	margin-top: 20px;
-	text-align: center;
+	text-align: left;
 	font-family: Futura;
 	line-height: 32px;
 	font-size: 22px;
@@ -148,8 +148,12 @@ border: 0;
 @media (max-width: 414px) {
 /* 轮播图 */
 	#home-slick #slick {
-		width: 100%;
-		height: auto;
+		width: auto;
+		height: 200px;
+	}
+	#slick img {
+		width: auto;
+		height: 200px;
 	}
 	#slick .slick-prev {
 		left: 10px;
@@ -169,15 +173,17 @@ border: 0;
 		width: 100%;
 	}
 	#welcome h1 {
-		font-size: 18px;
+		font-size: 20px;
 		margin: 0;
-		line-height: 60px;
+		line-height: 30px;
+		margin-bottom: 20px;
 	}
 	#welcome hr {
 		width: 100%;
 	}
 	#welcome p {
-		font-size: 18px;
+		padding: 0 20px;
+		font-size: 22px;
 	}
 	#home-product {
 		width: 100%;
@@ -202,13 +208,26 @@ border: 0;
 	.evaluate {
 		width: 100%;
 	}
+	.evaluate span {
+    width: 70%;
+  }
 	.evaluate-title {
-		font-size: 18px;
+		font-size: 20px;
 		margin: 0;
 		margin-top: 30px;
 	}
 	.evaluate li {
-		font-size: 18px;
+		border-right: 0;
+		font-size: 20px;
 		height: auto;
+	}
+	.evaluate li:first-child {
+		padding: 0 20px;
+	}
+	.evaluate li:nth-child(2) {
+		padding: 0 20px;
+	}
+	.evaluate li:last-child {
+		padding: 0 20px;
 	}
 }
