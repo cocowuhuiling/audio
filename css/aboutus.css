@@ -29,7 +29,7 @@
 	text-align: center;
 }
 .about-content .about {
-	margin: 130px 0;
+	margin: 30px 0;
 }
 .about-content .title {
 	text-align: left;
@@ -41,6 +41,39 @@
 	text-align: left;
 	width: 50%;
 	display: inline-block;
+}
+.contact.address {
+	text-align: left;
+}
+.about-contact {
+	margin: 60px 0;
+}
+.about-contact form {
+	margin: 0 auto;
+	width: 1140px;
+}
+.about-contact label {
+	display: inline-block;
+	margin: 20px 0;
+	text-transform: uppercase;
+}
+.about-contact input {
+	/*margin-top: 20px;*/
+	width: 1140px;
+	height: 30px;
+}
+.about-contact textarea {
+	margin-bottom: 20px;
+	width: 1140px;
+	height: 100px;
+}
+#submit {
+	width: 60px;
+}
+.about-contact h1 {
+	width: 1140px;
+	margin: 0 auto;
+	font-size: 22px;
 }
 @media(max-width: 414px) {
 	#about {
@@ -69,6 +102,35 @@
 		padding-left: 10px;
 	}
 	.about-content .contact {
-		padding-left: 10px;
+			padding-left: 10px;
+		}
+		.about-contact {
+		margin: 30px 0;
+	}
+	.about-contact form {
+		margin: 0 auto;
+		width: 96%;
+	}
+	.about-contact label {
+		display: inline-block;
+		margin: 20px 0;
+		text-transform: uppercase;
+	}
+	.about-contact input {
+		/*margin-top: 20px;*/
+		width: 96%;
+		height: 30px;
+	}
+	.about-contact textarea {
+		margin-bottom: 20px;
+		width: 96%;
+		height: 50px;
+	}
+	#submit {
+		width: 30px;
+	}
+	.about-contact h1 {
+		width: 96%;
+		margin: 0 auto;
 	}
 }
