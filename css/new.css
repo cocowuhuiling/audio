@@ -20,6 +20,7 @@
 }
 .news .left img {
 	height: 100%;
+	height: 100%;
 }
 .news .left .img2 {
 	position: absolute;
@@ -74,6 +75,10 @@
 }
 .news-top .img-wrap {
 	margin: 0 auto;
+}
+.img-wrap img {
+	width: 100%;
+	height: 100%;
 }
 .news-top .img2 {
 	position: absolute;
