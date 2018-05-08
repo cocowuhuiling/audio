@@ -18,6 +18,9 @@
 	padding: 2px;
 	background-color: #a97d1f;
 }
+.news .left img {
+	height: 100%;
+}
 .news .left .img2 {
 	position: absolute;
 	left: 39%;
